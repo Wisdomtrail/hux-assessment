@@ -1,0 +1,316 @@
+@media screen and (min-width: 700px) {
+  .topNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff2dd;
+    height: 60px;
+  }
+
+  #logo {
+    width: 20vw;
+    height: 5vw;
+  }
+
+  #tsang {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  #bannerImg {
+    width: 100%;
+  }
+
+  #online {
+    background: linear-gradient(to right, #9c581c, #1d0f03);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .linksDiv {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .linksDiv a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .linksDiv a:hover {
+    text-decoration: underline;
+  }
+
+  .clickableItems {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+  }
+
+  .clickableItems span {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .clickableItems .active {
+    background: linear-gradient(to right, #9c581c, #1d0f03);
+    color: white;
+  }
+
+  .content {
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    /* Center the content */
+  }
+
+  .historyOfBank.active,
+  .boardOfDirectors.active,
+  .regulatoryDisclosures.active,
+  .pressRelease.active,
+  .financialHighlights.active {
+    display: block;
+  }
+
+  .managementHeader,
+  .boardHeader {
+    background: linear-gradient(to right, #DD9B4A, #9c6119);
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .boardHeader {
+    width: 100%;
+  }
+
+  .boardTitle {
+    margin-left: 20px;
+    height: 650px;
+    color: #9c6119;
+    font-size: larger;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .boardContent {
+    margin-left: 70px;
+    text-align: left;
+  }
+
+  .SBJ {
+    margin-left: 60px;
+  }
+
+  .boardBody {
+    border: 2px solid black;
+    display: flex;
+    width: 100%;
+    border-top: none;
+  }
+
+  .boardOfDirectors,
+  .management {
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .boardOfDirectorsMain {
+    display: flex;
+    width: 180%;
+    margin-left: -18vw;
+  }
+  .regulatoryDisclosures{
+    width: 160% !important;
+    margin-left: -14vw;
+  }
+  .regulatoryDisclosuresHeader{
+    background: linear-gradient(to right, #DD9B4A, #9c6119);
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .regulatoryDisclosuresBody{
+    border: 2px solid black;
+    text-align: left;
+    border-top: none;
+  }
+  .regulatoryDisclosuresBody li{
+    margin-left: 20px;
+  }
+  .financialHighlights{
+    margin-left: -20vw;
+    display: flex;
+    width: 200%;
+  }
+  .financialHighlights div{
+    margin-right: 20px;
+    margin-left: 20px;
+    
+  }
+  .financialHighlights span{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .clickableItems {
+    display: block;
+    justify-content: space-around;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+  }
+
+  .clickableItems span {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .clickableItems .active {
+    background: linear-gradient(to right, #9c581c, #1d0f03);
+    color: white;
+  }
+
+  .content {
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    /* Center the content */
+  }
+
+  .historyOfBank{
+    width: 180%;
+    margin-left: -15vw;
+  }
+
+  .historyOfBank.active,
+  .boardOfDirectors.active,
+  .regulatoryDisclosures.active,
+  .pressRelease.active,
+  .financialHighlights.active {
+    display: block;
+  }
+
+  .managementHeader{
+    width: 190%;
+  }
+
+  .managementHeader,
+  .boardHeader {
+    background: linear-gradient(to right, #DD9B4A, #9c6119);
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .boardHeader {
+    width: 190%;
+  }
+
+  .boardTitle {
+    margin-left: 20px;
+    height: 650px;
+    color: #9c6119;
+    font-size: larger;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .boardContent {
+    margin-left: 70px;
+    text-align: left;
+  }
+
+  .SBJ {
+    margin-left: 60px;
+  }
+
+  .boardBody {
+    border: 2px solid black;
+    display: flex;
+    width: 190%;
+    border-top: none;
+  }
+
+  .boardOfDirectors,
+  .management {
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .boardOfDirectorsMain {
+    display: block;
+    width: 200%;
+    margin-left: -20vw;
+  }
+  .regulatoryDisclosures{
+    width: 160% !important;
+    margin-left: -14vw;
+  }
+  .regulatoryDisclosuresHeader{
+    background: linear-gradient(to right, #DD9B4A, #9c6119);
+    height: 50px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .regulatoryDisclosuresBody{
+    border: 2px solid black;
+    text-align: left;
+    border-top: none;
+  }
+  .regulatoryDisclosuresBody li{
+    margin-left: 20px;
+  }
+  .financialHighlights{
+    margin-left: -20vw;
+    display: block;
+    width: 200%;
+  }
+  .financialHighlights div{
+    margin-right: 20px;
+    margin-left: 20px;
+    
+  }
+  .financialHighlights span{
+    font-size: 25px;
+  }
+}
