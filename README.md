@@ -52,7 +52,7 @@ This is the frontend repository for the Contact Management System, a web applica
 
 3. Create a `.env` file in the root directory and add the following environment variables:
    ```
-   BASE_URL=http://localhost:5000/api
+   BASE_URL=http://127.0.0.1:5000
    ```
    Replace the URL with your backend API URL.
 
