@@ -1,0 +1,453 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.infoDiv img{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+}
+
+.text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+
+    height: 60vw;
+    width: 60vw;
+
+}
+.text h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    
+}
+.infoDiv{
+    background: linear-gradient(to right, #e6dacd, #ffffff, #fff8f1);
+}
+
+.indexH1{
+    color: #000000;
+}
+@media screen and (min-width: 700px) {
+
+    .topNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        background-color: #ffffff;
+        height: 60px;
+    }
+
+    .text {
+        position: relative;
+
+
+    }
+
+    #logo {
+        width: 20vw;
+        height: 5vw;
+    }
+
+    #tsang {
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+
+    #online {
+        background: linear-gradient(to right, #9C581C, #1d0f03);
+        color: white;
+        border-radius: 7px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .linksDiv {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .linksDiv a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .linksDiv a:hover {
+        text-decoration: underline;
+    }
+
+
+    .BannerDiv {
+        position: relative;
+        width: 100%;
+        height: 80vw;
+        /* height: 500px; */
+        /* Fixed height */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+    
+    
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(170, 170, 170, 0.5);
+        /* White with 50% opacity */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        color: black;
+    }
+
+    .text h1,
+    .text p {
+        margin: 0;
+        padding: 0 20px;
+        /* Optional: to add some padding inside the text container */
+    }
+
+    .servicesDivs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 200px;
+    }
+
+    .servicesDivs div {
+        width: 150px;
+        border-radius: 8px;
+        margin-right: 25px;
+        margin-left: 25px;
+        height: 170px;
+        background-color: rgba(245, 241, 226, 0.5); /* Red with 50% opacity */
+        backdrop-filter: blur(5px); 
+
+    }
+
+ 
+    #loanImage {
+        margin-top: 30px;
+        border-radius: 8px;
+        width: 45px;
+    }
+
+    .servicesDivs h5 {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    .servicesDivs span {
+        font-size: small;
+    }
+
+    .aboutUs {
+        display: flex;
+        justify-content: space-between;
+        /* Push items to the edges */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .bankingService {
+        display: flex;
+        flex-direction: row-reverse;
+        /* Reverse the order of the children */
+        justify-content: space-between;
+        /* Push items to the edges */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .imageDiv {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        /* Align image to the end (right) */
+    }
+
+    .textDiv {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align text to the start (left) */
+    }
+
+    .textDiv span {
+        font-size: 18px;
+    }
+
+    #aboutUsImage {
+        height: 320px;
+        margin-left: 30px;
+    }
+
+
+
+    .imageDiv {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        /* Align image to the start (left) */
+    }
+
+    .textDiv {
+        margin-right: 30px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        /* Align text to the end (right) */
+    }
+
+    .textDiv span {
+        font-size: 18px;
+    }
+
+    #aboutUsImage {
+        height: 320px;
+        margin-left: 30px;
+    }
+
+    .bottomDiv {
+        height: 300px;
+        width: 100%;
+        background-color: #3F240B;
+    }
+
+    .topBottomDiv {
+        height: 200px;
+        width: 97%;
+        border-bottom: 2px solid white;
+    }
+
+    .topBottomDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .leftSide,
+    .rightSide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menuIcon {
+        display: none;
+    }
+
+    .leftSide h2,
+    .rightSide h1 {
+        margin: 0;
+    }
+
+    .rightSide {
+        margin-right: 30px;
+    }
+
+    .leftSide {
+        margin-left: 30px;
+    }
+
+    .leftSide span,
+    .rightSide span {
+        font-size: 14px;
+    }
+
+    .bottomBottomDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    .bottomBottomDiv div {
+        display: flex;
+        align-items: center;
+    }
+
+    .bottomBottomDiv div img {
+        margin-left: 10px;
+        /* Add some space between the icons */
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .topNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+        padding: 0 20px;
+        background-color: #ffffff;
+        height: 60px;
+    }
+.textDiv{
+    padding: 10px;
+
+}
+.imageDiv{
+    padding: 10px;
+
+}
+    .text {
+        position: relative;
+        top: 20vw;
+        left: 20vw;
+
+    }
+
+    #tsang {
+        background-color: white;
+        border: none;
+        font-size: 20px;
+    }
+
+    .linksDiv {
+        display: none;
+    }
+
+    #online {
+        display: none;
+    }
+
+    .BannerDiv {
+        position: relative;
+        width: 100%;
+        height: 1100px;
+        /* Fixed height */
+        background-size: cover;
+        flex-shrink: 0;
+    }
+
+    .servicesDivs {
+        text-align: center;
+        /* Center the content horizontally */
+        padding: 0 20px;
+    }
+
+    .servicesDivs div {
+        width: 230px;
+        border-radius: 8px;
+        margin: 0 auto 30px auto;
+        /* Center the service divs and add margin at the bottom */
+        height: 200px;
+        background-color: rgba(245, 241, 226, 0.5); /* Red with 50% opacity */
+        backdrop-filter: blur(5px); 
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* background-color: #F9EDDF; */
+    }
+
+    #loanImage {
+        margin-top: 30px;
+        border-radius: 8px;
+        background-position: center;
+        background-size: cover;
+        /* Adjust as needed */
+        width: 45px;
+    }
+
+    .servicesDivs h5 {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    .servicesDivs span {
+        font-size: small;
+    }
+
+    #aboutUsImage {
+        width: 100%;
+        margin-bottom: 10vw;
+        
+    }
+
+    .bottomDiv {
+        background-color: #3F240B;
+        color: white;
+        text-align: left;
+        /* Align all content to the left */
+        padding: 20px;
+        /* Add padding for some spacing */
+    }
+
+    #follow {
+        margin-top: 30px;
+    }
+
+    .rightSide {
+        margin-top: 50px;
+    }
+
+    .topBottomDiv {
+        border-bottom: 2px solid white;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+
+    .linksDiv {
+        display: none;
+        /* Hide the regular links */
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        /* Below the top navigation */
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .mobileMenu.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobileMenu a {
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+    }
+}

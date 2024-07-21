@@ -1,0 +1,76 @@
+.transactions-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 80vw;
+    position: relative;
+    left: 20vw;
+  }
+  
+  .transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-filter {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar, .filter-dropdown {
+    position: relative;
+  }
+  
+  .search-bar input, .filter-dropdown select {
+    padding: 10px 30px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-icon, .filter-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .transactions-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transactions-list th, .transactions-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .transactions-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .status.completed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+  }

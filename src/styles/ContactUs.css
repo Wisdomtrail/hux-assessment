@@ -1,0 +1,173 @@
+@media screen and (min-width: 700px) {
+    .bankingHours {
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 400px;
+    }
+    .generalEn{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 450px;
+    }
+    .customerCo{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 500px;
+    }
+    .bfam{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 170px;
+    }
+    .bfamCont{
+        text-align: left;
+    }
+    
+    .customerCo button{
+        height: 60px;
+        background: linear-gradient(to bottom, #9C581C, #4d290a);
+        color: white;
+        border: none;
+        font-weight: bold;
+        width: 300px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: -700px;
+    }
+
+    .header {
+        background: linear-gradient(to bottom, #9C581C, #4d290a);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .bodyb {
+        display: flex;
+    }
+
+    
+    .titles {
+        width: 20%;
+        font-size: large;
+        margin-left: 30px;
+        color: #7E5530;
+        text-align: left; /* Align text to the left */
+    }
+    
+    .titleCont {
+        margin-left: 10px;
+        text-align: left; /* Ensure text is aligned to the left */
+    }
+    
+    .header span {
+        color: white;
+        margin-left: 10px;
+        font-size: larger;
+        font-weight: bolder;
+        text-align: left; /* Ensure header text is aligned to the left */
+    }
+
+    .bodyBottom{
+        font-size: large;
+        margin-left: 10px;
+        text-align: left;
+    }    
+}
+
+@media screen and (max-width: 700px) {
+    #bannerImg{
+        width: 100%;
+    }
+    .bankingHours {
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 600px;
+    }
+    .generalEn{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 550px;
+    }
+    .customerCo{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 500px;
+    }
+    .bfam{
+        width: 80%;
+        border: 2px solid rgb(201, 200, 200);
+        text-align: center;
+        margin: 0 auto;
+        height: 270px;
+    }
+    .bfamCont{
+        text-align: left;
+    }
+    
+    .customerCo button{
+        height: 60px;
+        background: linear-gradient(to bottom, #9C581C, #4d290a);
+        color: white;
+        border: none;
+        font-weight: bold;
+        width: 300px;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+
+    .header {
+        background: linear-gradient(to bottom, #9C581C, #4d290a);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .bodyb {
+        display: flex;
+    }
+
+    
+    .titles {
+        width: 20%;
+        font-size: large;
+        margin-left: 30px;
+        color: #7E5530;
+        text-align: left; /* Align text to the left */
+    }
+    
+    .titleCont {
+        margin-left: 70px;
+        text-align: left; /* Ensure text is aligned to the left */
+    }
+    
+    .header span {
+        color: white;
+        margin-left: 10px;
+        font-size: larger;
+        font-weight: bolder;
+        text-align: left; /* Ensure header text is aligned to the left */
+    }
+
+    .bodyBottom{
+        font-size: large;
+        margin-left: 10px;
+        text-align: left;
+    }    
+}

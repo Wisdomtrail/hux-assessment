@@ -1,0 +1,71 @@
+.edit-user-cont {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #FD8F00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.edit-user-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.edit-user-form input {
+    width: 40%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto; /* Centers the input horizontally */
+}
+
+
+.transactions {
+    margin-top: 20px;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.transaction-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.transaction-table td input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-transaction-button, .delete-button, .save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-transaction-button:hover, .delete-button:hover, .save-button:hover {
+    background-color: #555;
+}

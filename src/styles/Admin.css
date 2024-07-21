@@ -1,0 +1,141 @@
+/* Admin.css */
+
+.AdminMainCont {
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    width: 80vw;
+    position: relative;
+    left: 20vw;
+}
+
+.adminH1 {
+    color: #493b01;
+    font-size: 3rem;
+}
+
+.tableSection {
+    background-color: #ffffff;
+}
+
+.adminAddUser {
+
+
+    background-color: #909090;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 30vw;
+    transition: background-color 0.3s ease;
+
+
+}
+.adminAddUser:hover {
+    background-color: #45a049;
+}
+@media screen and (min-width: 700px) {
+
+    .add-user-form input {
+        width: 40%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        display: block;
+        margin: 10px auto;
+        /* Centers the input fields */
+    }
+
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.user-row:hover {
+    background-color: #ddd;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
