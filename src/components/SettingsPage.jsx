@@ -22,7 +22,7 @@ const SettingsPage = () => {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get(`http://${global.BASE_URL}/api/user`, {
+      const response = await axios.get(`http://${global.BASE_URL}/api/users`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       setFormData(prevState => ({
@@ -51,6 +51,7 @@ const SettingsPage = () => {
     }
 
     try {
+      // eslint-disable-next-line no-unused-vars
       const response = await axios.put(
         `http://${global.BASE_URL}/api/user/update`,
         {
@@ -75,7 +76,6 @@ const SettingsPage = () => {
     } catch (error) {
       setMessage(error.response?.data?.message || 'Error updating profile.');
     }
-
     setLoading(false);
   };
 
