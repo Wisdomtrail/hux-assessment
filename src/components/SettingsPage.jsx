@@ -53,7 +53,7 @@ const SettingsPage = () => {
     try {
       // eslint-disable-next-line no-unused-vars
       const response = await axios.put(
-        `http://${global.BASE_URL}/api/user/update`,
+        `http://${global.BASE_URL}/api/users/update`,
         {
           username: formData.username,
           email: formData.email,

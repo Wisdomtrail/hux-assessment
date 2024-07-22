@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { PlusIcon, DotsVerticalIcon, EyeIcon, PencilIcon, TrashIcon } from '@heroicons/react/solid';
@@ -7,17 +7,8 @@ const ContactsListPage = () => {
   const [contacts, setContacts] = useState([]);
   const [message, setMessage] = useState('');
   const [openDropdown, setOpenDropdown] = useState(null);
-  const dropdownRefs = useRef({});
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    fetchContacts();
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const fetchContacts = async () => {
     try {
@@ -30,7 +21,30 @@ const ContactsListPage = () => {
     }
   };
 
-  const handleDelete = async (id) => {
+  useEffect(() => {
+    fetchContacts();
+  }, []);
+
+  const handleClickOutside = useCallback((event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setOpenDropdown(null);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (openDropdown !== null) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [openDropdown, handleClickOutside]);
+
+  const handleDelete = async (id, event) => {
+    event.stopPropagation();
     if (window.confirm('Are you sure you want to delete this contact?')) {
       try {
         await axios.delete(`http://${global.BASE_URL}/api/contacts/${id}`, {
@@ -42,19 +56,12 @@ const ContactsListPage = () => {
         setMessage('Error deleting contact.');
       }
     }
+    setOpenDropdown(null);
   };
 
-  const toggleDropdown = (id) => {
+  const toggleDropdown = (id, event) => {
+    event.stopPropagation();
     setOpenDropdown(openDropdown === id ? null : id);
-  };
-
-  const handleClickOutside = (event) => {
-    if (openDropdown) {
-      const dropdownElement = dropdownRefs.current[openDropdown];
-      if (dropdownElement && !dropdownElement.contains(event.target)) {
-        setOpenDropdown(null);
-      }
-    }
   };
 
   return (
@@ -91,11 +98,7 @@ const ContactsListPage = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {contacts.map((contact) => (
-                  <tr
-                    key={contact._id}
-                    className="hover:bg-gray-50 cursor-pointer"
-                    onClick={() => navigate(`/contacts/${contact._id}`)}
-                  >
+                  <tr key={contact._id} className="hover:bg-gray-50">
                     <td className="px-6 py-6 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-12 w-12">
@@ -114,13 +117,10 @@ const ContactsListPage = () => {
                     <td className="px-6 py-6 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell">{contact.phoneNumber}</td>
                     <td className="px-6 py-6 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell">{contact.address}</td>
                     <td className="px-6 py-6 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="relative" ref={(el) => dropdownRefs.current[contact._id] = el}>
+                      <div className="relative" ref={openDropdown === contact._id ? dropdownRef : null}>
                         <button
                           className="text-gray-400 hover:text-gray-500 focus:outline-none"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleDropdown(contact._id);
-                          }}
+                          onClick={(e) => toggleDropdown(contact._id, e)}
                         >
                           <DotsVerticalIcon className="h-5 w-5" aria-hidden="true" />
                         </button>
@@ -129,7 +129,11 @@ const ContactsListPage = () => {
                             <div className="py-1">
                               <button
                                 className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full"
-                                onClick={() => navigate(`/contacts/${contact._id}`)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  navigate(`/contacts/${contact._id}`);
+                                  setOpenDropdown(null);
+                                }}
                               >
                                 <EyeIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
                                 View
@@ -138,7 +142,11 @@ const ContactsListPage = () => {
                             <div className="py-1">
                               <button
                                 className="group flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full"
-                                onClick={() => navigate(`/edit-contact/${contact._id}`)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  navigate(`/edit-contact/${contact._id}`);
+                                  setOpenDropdown(null);
+                                }}
                               >
                                 <PencilIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
                                 Edit
@@ -147,7 +155,7 @@ const ContactsListPage = () => {
                             <div className="py-1">
                               <button
                                 className="group flex items-center px-4 py-2 text-sm text-red-700 hover:bg-gray-100 hover:text-red-900 w-full"
-                                onClick={() => handleDelete(contact._id)}
+                                onClick={(e) => handleDelete(contact._id, e)}
                               >
                                 <TrashIcon className="mr-3 h-5 w-5 text-red-400 group-hover:text-red-500" aria-hidden="true" />
                                 Delete
