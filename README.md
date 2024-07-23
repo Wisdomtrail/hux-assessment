@@ -41,7 +41,7 @@ This is the frontend repository for the Contact Management System, a web applica
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/hux-assessment-frontend.git
+   git clone https://github.com/Bolaji5821/hux-assessment-frontend
    cd hux-assessment-frontend
    ```
 
